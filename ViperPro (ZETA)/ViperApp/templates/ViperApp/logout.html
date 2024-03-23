@@ -1,0 +1,23 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cerrar Sesión</h2>
+<br><br><br>
+<p>Seguro que quieres cerrar sesión?</p>
+<form action="{% url 'Logout' %}" method="post"> {% csrf_token %}
+
+    <button type="submit"><a href="{% url 'Login' %}"></a>Cerrar Sesión</button>
+    <button><a href="{% url 'Inicio' %}"> Volver </a></button>
+
+</form>
+
+<br><br><br>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Lista de Productos</h2>
+<button>
+    <a href="{% url 'Alta_Productos' %}"> + Nuevo Producto </a>
+</button>
+
+<br><br><br>
+{% for productos in products %}
+-------------------------------
+<p> {{productos.nombre}} </p>
+<p> sku: {{productos.sku}} </p>
+<p> {{productos.marca}} </p>
+<p> {{productos.descripcion}} </p>
+<p> $ {{productos.precio}} </p>
+<p> {{productos.imagen}} </p>
+<button>
+    <a href="{% url 'Modifica_Productos' productos.nombre %}"> - Modificar Producto </a>
+</button>
+<br><br>
+<button>
+    <a href="{% url 'Baja_Productos' productos.nombre %}"> - Eliminar Producto </a>
+</button>
+<br><br>
+
+{% endfor %}
+</div>
+
+{% endblock %}

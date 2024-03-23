@@ -1,0 +1,31 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Modificar Productos</h2>
+
+<br><br><br>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+      
+       {{formProd.as_table}}
+      
+       </table>
+       <br><br>
+       <!--<label for="image">Select Image:</label>
+       <input type="file" id="image" name="image" accept="image/*">
+       <br><br>
+       <button type="submit">Upload</button> -->
+       <br>
+       <input type="submit" value="Guardar"> 
+       <br><br>      
+  </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "ViperApp/zplantvacia.html" %}
+{% load static %}
+{% block listas %}
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Usuario y/o contraseña incorrectos</h2>
+<br><br><br>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Intente nuevamente</h2>
+<br><br><br>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>    
+        
+        <button>
+            <a href="{% url 'Login' %}"> Volver </a>
+        </button>
+    </table>    
+    <br><br><br>    
+</form>
+
+</div>
+{% endblock %}

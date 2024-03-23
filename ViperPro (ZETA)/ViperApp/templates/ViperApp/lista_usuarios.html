@@ -1,0 +1,33 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Lista de usuarios</h2>
+<button>
+    <a href="{% url 'Alta_Usuarios' %}"> + Nuevo usuario </a>
+</button>
+<br><br><br>
+{% for usuarios in user %}
+---------------------------------
+<p> Usuario: {{usuarios.user}} </p>
+<p> email: {{usuarios.email}} </p>
+<button>
+    <a href="{% url 'Modifica_Usuarios' usuarios.user %}"> - Modificar Usuario </a>
+</button>
+    <br><br>
+<button>
+    <a href="{% url 'Baja_Usuarios' usuarios.user %}"> - Eliminar Usuario </a>
+</button>
+<br>
+
+{% endfor %}
+
+
+</div>
+
+{% endblock %}

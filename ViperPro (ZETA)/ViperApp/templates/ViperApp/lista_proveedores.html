@@ -1,0 +1,32 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Lista de Proveedores</h2>
+<button>
+    <a href="{% url 'Alta_Proveedores' %}"> + Nuevo Proveedor </a>
+</button>
+<br><br><br>
+{% for Proveedor in proveedor %}
+-------------------------------
+<p> Nombre: {{Proveedor.nombre}} </p>
+<p> Dirección: {{Proveedor.direccion}} </p>
+<p> Email: {{Proveedor.email}} </p>
+<button>
+    <a href="{% url 'Modifica_Proveedores' Proveedor.nombre %}"> - Modificar Proveedor </a>
+</button>
+<br><br>
+<button>
+    <a href="{% url 'Baja_Proveedores' Proveedor.nombre %}"> - Eliminar Proveedor </a>
+</button>
+<br>
+
+{% endfor %}
+</div>
+
+{% endblock %}

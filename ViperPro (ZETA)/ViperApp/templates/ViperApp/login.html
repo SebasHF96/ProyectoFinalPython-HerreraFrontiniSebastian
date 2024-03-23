@@ -1,0 +1,22 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+{% load static %}
+
+{% block listas %}
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Iniciar Sesión</h2>
+
+<br><br><br>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>    
+        {{formulario.as_p}}    
+    </table>
+    
+    <button type="submit">Iniciar Sesión</button>
+
+    <br><br><br>
+    
+</form>
+</div>
+{% endblock %}

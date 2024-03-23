@@ -1,0 +1,27 @@
+{% extends "ViperApp/zplantvacia.html" %}
+
+
+{% load static %}
+
+
+{% block listas %}
+</div>
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Modificar usuarios</h2>
+
+<br><br><br>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    
+        {{formUser.as_table}}
+    
+    </table>
+    
+    <input type="submit" value="Guardar">
+    <br><br><br>
+    
+</form>
+
+</div>
+
+{% endblock %}
